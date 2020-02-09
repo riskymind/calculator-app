@@ -42,6 +42,7 @@
                 android:layout_weight="1"
                 android:layout_marginRight="1pt"
                 android:textSize="18sp"
+                android:onClick="clearEvent"
                 android:background="@color/lightgrayBg"
                 android:text="AC" />
 
@@ -57,8 +58,8 @@
                 android:text="+/-" />
 
             <Button
-                android:id="@+id/btnMod"
-                android:onClick="operationEvent"
+                android:id="@+id/btnPercent"
+                android:onClick="percentEvent"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:textSize="18sp"

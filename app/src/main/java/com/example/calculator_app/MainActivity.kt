@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        display.setText("")
+        display.setText("0")
     }
 
     fun btnEvent(view: View) {
@@ -82,10 +82,6 @@ class MainActivity : AppCompatActivity() {
                 operation = "*"
             }
 
-            btnMod.id -> {
-               operation = "%"
-            }
-
             btnDiv.id -> {
                 operation = "/"
             }
@@ -120,6 +116,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         display.setText(result.toString())
+        isNewValue = true
+    }
+
+    fun percentEvent(view: View) {
+        var value = display.text.toString().toDouble() /100
+        display.setText(value.toString())
+        isNewValue = true
+    }
+
+    fun clearEvent(view: View) {
+        display.setText("0.0")
         isNewValue = true
     }
 }
