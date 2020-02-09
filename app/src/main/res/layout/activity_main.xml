@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical"
-    android:padding="10pt"
+    android:padding="3pt"
     tools:context=".MainActivity">
 
 
