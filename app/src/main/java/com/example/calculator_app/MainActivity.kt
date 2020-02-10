@@ -7,15 +7,13 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var operation = ""
-    var oldValue = ""
-    var isNewValue = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         display.setText("0")
     }
 
+    var isNewValue = true
     fun btnEvent(view: View) {
         if (isNewValue) {
             display.setText("")
@@ -67,6 +65,8 @@ class MainActivity : AppCompatActivity() {
         display.setText(btnValue)
     }
 
+    var oldValue = ""
+    var operation = ""
     fun operationEvent(view: View) {
         var selectedBtn = view as Button
         when(selectedBtn.id) {
